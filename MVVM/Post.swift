@@ -12,14 +12,14 @@ import RealmSwift
 class Post: Object {
     
     /// Primary key
-    dynamic var id = 0
+    @objc dynamic var id = 0
     
     /// Properties
-    dynamic var title = ""
-    dynamic var body = ""
+    @objc dynamic var title = ""
+    @objc dynamic var body = ""
     
     /// Relationships
-    dynamic var user: User?
+    @objc dynamic var author: User?
     let comments = LinkingObjects(fromType: Comment.self, property: "post")
     
     override static func primaryKey() -> String? {

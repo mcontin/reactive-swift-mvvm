@@ -12,10 +12,10 @@ import RealmSwift
 class User: Object {
     
     /// Primary key
-    dynamic var id = 0
+    @objc dynamic var id = 0
     
     /// Properties
-    dynamic var username = ""
+    @objc dynamic var username = ""
     
     /// Relationships
     let posts = LinkingObjects(fromType: Post.self, property: "user")

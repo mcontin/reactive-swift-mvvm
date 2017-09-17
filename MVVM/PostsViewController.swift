@@ -14,23 +14,21 @@ class PostsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let posts: Variable<[Post]> = Variable([])
-    let postsViewModel: PostsViewModel = PostsViewModel(withPost: Post())
+    let postsViewModel = PostsViewModel()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        posts.asObservable()
+        postsViewModel.posts.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: "PostCell", cellType: PostCell.self)) { (row, element, cell) in
-                self.postsViewModel.post = element
-                cell.viewModel = self.postsViewModel
+                cell.authorLabel.text = element.author?.username
+                cell.titleLabel.text = element.title
+                cell.previewLabel.text = element.body
             }
             .disposed(by: disposeBag)
         
-        posts.value = PostsStore.getPosts()
-        
-        // fetch posts if not present
+        postsViewModel.posts.value = PostsStore.getMockPosts()
     }
 
 }

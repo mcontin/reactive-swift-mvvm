@@ -10,9 +10,11 @@ import Foundation
 
 class PostsStore {
     
-    static func getPosts() -> [Post] {
+    static func getMockPosts() -> [Post] {
         let posts: [Post] = (0..<20).map { index in
             let tempPost = Post()
+            tempPost.author = User()
+            tempPost.author?.username = "Poster \(index + 1)"
             tempPost.title = "This is title number \(index + 1)"
             tempPost.body = "This is body number \(index + 1)"
             return tempPost

@@ -12,15 +12,15 @@ import RealmSwift
 class Comment: Object {
     
     /// Primary key
-    dynamic var id = 0
+    @objc dynamic var id = 0
     
     /// Properties
-    dynamic var name = ""
-    dynamic var email = ""
-    dynamic var body = ""
+    @objc dynamic var name = ""
+    @objc dynamic var email = ""
+    @objc dynamic var body = ""
     
     /// Relationships
-    dynamic var post: Post?
+    @objc dynamic var post: Post?
     
     override static func primaryKey() -> String? {
         return "id"

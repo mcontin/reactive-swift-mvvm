@@ -15,13 +15,5 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var previewLabel: UILabel!
-
-    var viewModel: PostsViewModel? {
-        didSet {
-            self.titleLabel.text = viewModel?.title
-            self.previewLabel.text = viewModel?.body
-            self.authorLabel.text = viewModel?.author
-        }
-    }
     
 }

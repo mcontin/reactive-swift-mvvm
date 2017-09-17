@@ -7,25 +7,10 @@
 //
 
 import UIKit
+import RxSwift
 
 class PostsViewModel {
 
-    var post: Post
+    let posts: Variable<[Post]> = Variable([])
     
-    var author: String {
-        return post.title
-    }
-    
-    var title: String {
-        return post.title
-    }
-    
-    var body: String {
-        return post.body
-    }
-    
-    init(withPost post: Post) {
-        self.post = post
-    }
-
 }
