@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B724041BB1F7F58F78DAB9142C25D95"
+               BlueprintIdentifier = "E751B8DD10AAF99C13CE0650A56E9576"
                BuildableName = "Pods_MVVM.framework"
                BlueprintName = "Pods-MVVM"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B724041BB1F7F58F78DAB9142C25D95"
+            BlueprintIdentifier = "E751B8DD10AAF99C13CE0650A56E9576"
             BuildableName = "Pods_MVVM.framework"
             BlueprintName = "Pods-MVVM"
             ReferencedContainer = "container:Pods.xcodeproj">

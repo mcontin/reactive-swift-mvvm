@@ -9,8 +9,9 @@ target 'MVVM' do
   pod 'Alamofire', '~> 4.4'
 
   # RxSwift
-  pod 'RxSwift',    '~> 3.0'
-  pod 'RxCocoa',    '~> 3.0'
+  pod 'RxSwift'#,    '~> 3.0'
+  pod 'RxCocoa'#,    '~> 3.0'
+  pod 'RxDataSources'#, '~> 1.0'
 
   # Realm
   pod 'RealmSwift'
@@ -25,4 +26,24 @@ target 'MVVM' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        if target.name == 'RxSwift'
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '3.0'
+            end
+        end
+        if target.name == 'RxCocoa'
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '3.0'
+            end
+        end
+        if target.name == 'RxDataSources'
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '3.0'
+            end
+        end
+    end
 end
