@@ -10,6 +10,8 @@
 		03E8A055E3792849A6989982 /* Pods_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453F8AC48A6303957F6D7081 /* Pods_MVVM.framework */; };
 		232CEE6353845534BAF0BCE6 /* Pods_MVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7514637B825EF943AFC85567 /* Pods_MVVMUITests.framework */; };
 		491B10151F7570F900E6683D /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B10141F7570F900E6683D /* Segues.swift */; };
+		493CF8AE1F82884100A27E86 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493CF8AD1F82884100A27E86 /* Realm.swift */; };
+		493CF8B01F828F8800A27E86 /* PostDetailSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493CF8AF1F828F8800A27E86 /* PostDetailSections.swift */; };
 		494A03531F53F6C90017D912 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A03521F53F6C90017D912 /* PostsViewModel.swift */; };
 		494A03551F5408D00017D912 /* PostsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A03541F5408D00017D912 /* PostsStore.swift */; };
 		49535C291F51938F007A8356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49535C281F51938F007A8356 /* AppDelegate.swift */; };
@@ -19,7 +21,7 @@
 		49535C331F51938F007A8356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49535C311F51938F007A8356 /* LaunchScreen.storyboard */; };
 		49535C3E1F519390007A8356 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49535C3D1F519390007A8356 /* MVVMTests.swift */; };
 		49535C491F519390007A8356 /* MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49535C481F519390007A8356 /* MVVMUITests.swift */; };
-		4962E1511F535FD50006F165 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4962E1501F535FD50006F165 /* PostDetailsViewController.swift */; };
+		4962E1511F535FD50006F165 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4962E1501F535FD50006F165 /* PostDetailViewController.swift */; };
 		4962E1561F5365750006F165 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4962E1551F5365750006F165 /* AlbumViewController.swift */; };
 		4962E1581F53661A0006F165 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4962E1571F53661A0006F165 /* PostCell.swift */; };
 		4962E15A1F536D9D0006F165 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4962E1591F536D9D0006F165 /* User.swift */; };
@@ -54,6 +56,8 @@
 		44053F02664DFD47EAECD695 /* Pods-MVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMUITests/Pods-MVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		453F8AC48A6303957F6D7081 /* Pods_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		491B10141F7570F900E6683D /* Segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
+		493CF8AD1F82884100A27E86 /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		493CF8AF1F828F8800A27E86 /* PostDetailSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailSections.swift; sourceTree = "<group>"; };
 		494A03521F53F6C90017D912 /* PostsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		494A03541F5408D00017D912 /* PostsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsStore.swift; sourceTree = "<group>"; };
 		49535C251F51938F007A8356 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +73,7 @@
 		49535C441F519390007A8356 /* MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49535C481F519390007A8356 /* MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMUITests.swift; sourceTree = "<group>"; };
 		49535C4A1F519390007A8356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4962E1501F535FD50006F165 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		4962E1501F535FD50006F165 /* PostDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		4962E1551F5365750006F165 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		4962E1571F53661A0006F165 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		4962E1591F536D9D0006F165 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -240,9 +244,9 @@
 			isa = PBXGroup;
 			children = (
 				49687AB11F781027008285F9 /* PostDetail.storyboard */,
-				4962E1501F535FD50006F165 /* PostDetailsViewController.swift */,
-				49687ABC1F782DD0008285F9 /* Table cells */,
+				4962E1501F535FD50006F165 /* PostDetailViewController.swift */,
 				49687AB81F7816EE008285F9 /* PostDetailViewModel.swift */,
+				49687ABC1F782DD0008285F9 /* Table cells */,
 			);
 			name = "Post details";
 			sourceTree = "<group>";
@@ -259,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				49687ABA1F781AC0008285F9 /* Optional.swift */,
+				493CF8AD1F82884100A27E86 /* Realm.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				49687AB31F7813FF008285F9 /* PostDetailCell.swift */,
+				493CF8AF1F828F8800A27E86 /* PostDetailSections.swift */,
 			);
 			name = "Table cells";
 			sourceTree = "<group>";
@@ -597,10 +603,12 @@
 				49535C2B1F51938F007A8356 /* PostsViewController.swift in Sources */,
 				4962E15A1F536D9D0006F165 /* User.swift in Sources */,
 				49687ABB1F781AC0008285F9 /* Optional.swift in Sources */,
+				493CF8B01F828F8800A27E86 /* PostDetailSections.swift in Sources */,
 				4962E15E1F53719C0006F165 /* Comment.swift in Sources */,
+				493CF8AE1F82884100A27E86 /* Realm.swift in Sources */,
 				49687AB91F7816EE008285F9 /* PostDetailViewModel.swift in Sources */,
 				49687AB41F7813FF008285F9 /* PostDetailCell.swift in Sources */,
-				4962E1511F535FD50006F165 /* PostDetailsViewController.swift in Sources */,
+				4962E1511F535FD50006F165 /* PostDetailViewController.swift in Sources */,
 				494A03551F5408D00017D912 /* PostsStore.swift in Sources */,
 				494A03531F53F6C90017D912 /* PostsViewModel.swift in Sources */,
 				49535C291F51938F007A8356 /* AppDelegate.swift in Sources */,

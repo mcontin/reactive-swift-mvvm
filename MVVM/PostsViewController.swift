@@ -44,7 +44,7 @@ class PostsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segue.showPostDetails,
            let postId = sender as? Int,
-           let destination = segue.destination as? PostDetailsViewController {
+           let destination = segue.destination as? PostDetailViewController {
             destination.postId = postId
         }
     }

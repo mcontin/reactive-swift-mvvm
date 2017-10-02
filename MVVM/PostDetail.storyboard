@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Post Details View Controller-->
+        <!--Post Detail View Controller-->
         <scene sceneID="CE1-8J-aBW">
             <objects>
-                <viewController storyboardIdentifier="PostDetailsViewController" automaticallyAdjustsScrollViewInsets="NO" id="2n5-fx-N4N" customClass="PostDetailsViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostDetailsViewController" automaticallyAdjustsScrollViewInsets="NO" id="2n5-fx-N4N" customClass="PostDetailViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VDm-0i-Pzg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,11 +23,11 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostDetailCell" rowHeight="271" id="15E-yY-0dk" customClass="PostDetailCell" customModule="MVVM" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="271"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostDetailCell" rowHeight="349" id="15E-yY-0dk" customClass="PostDetailCell" customModule="MVVM" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="349"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="15E-yY-0dk" id="ybD-gH-itX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="270.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="348.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A title for this post which may be actually very long" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdL-ps-o2J">
@@ -48,11 +48,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label df gd fg dfg   " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7D-3U-eJY">
-                                                    <rect key="frame" x="16" y="111.5" width="343" height="81.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7D-3U-eJY">
+                                                    <rect key="frame" x="16" y="111.5" width="343" height="243.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="JXx-80-vdg"/>
                                                     </constraints>
+                                                    <string key="text">body of the post which might be veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long t be veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long t be veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long   </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -76,7 +77,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="etc-Gh-O8f">
-                                        <rect key="frame" x="0.0" y="299" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="377" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="etc-Gh-O8f" id="wQE-XE-qqx">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
