@@ -6,10 +6,10 @@
 //  Copyright © 2017 Mattia. All rights reserved.
 //
 
-import UIKit
+import ObjectMapper
 import RealmSwift
 
-class User: Object {
+class User: Object, Mappable {
     
     /// Primary key
     @objc dynamic var id = 0
@@ -22,6 +22,15 @@ class User: Object {
     
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    required convenience init(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        username <- map["username"]
     }
     
 }

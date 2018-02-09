@@ -38,16 +38,6 @@ enum PostDetailSections: SectionModelType {
     }
 }
 
-protocol Multivalue {
-    var a: String { get }
-    var b: String { get }
-    var c: String { get }
-}
-
-enum MultivalueEnum {
-    case one(a: String, b: String, c: String)
-}
-
 enum Row {
     case post(customData: Post)
     case comment(string: Comment)

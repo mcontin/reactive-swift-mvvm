@@ -14,6 +14,7 @@
 		493CF8B01F828F8800A27E86 /* PostDetailSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493CF8AF1F828F8800A27E86 /* PostDetailSections.swift */; };
 		494A03531F53F6C90017D912 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A03521F53F6C90017D912 /* PostsViewModel.swift */; };
 		494A03551F5408D00017D912 /* PostsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A03541F5408D00017D912 /* PostsStore.swift */; };
+		4951EBA51F82A32B0020E988 /* PostCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4951EBA41F82A32B0020E988 /* PostCommentCell.swift */; };
 		49535C291F51938F007A8356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49535C281F51938F007A8356 /* AppDelegate.swift */; };
 		49535C2B1F51938F007A8356 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49535C2A1F51938F007A8356 /* PostsViewController.swift */; };
 		49535C2E1F51938F007A8356 /* PostsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49535C2C1F51938F007A8356 /* PostsList.storyboard */; };
@@ -31,7 +32,9 @@
 		49687AB41F7813FF008285F9 /* PostDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49687AB31F7813FF008285F9 /* PostDetailCell.swift */; };
 		49687AB91F7816EE008285F9 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49687AB81F7816EE008285F9 /* PostDetailViewModel.swift */; };
 		49687ABB1F781AC0008285F9 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49687ABA1F781AC0008285F9 /* Optional.swift */; };
+		49DC2A901FA0E1AC0021E606 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DC2A8F1FA0E1AC0021E606 /* Networker.swift */; };
 		6475A5E80F426F09441C7EE5 /* Pods_MVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3867A877A2A3BEF6E0E6F12D /* Pods_MVVMTests.framework */; };
+		BF8D9B1913E3A45045568610 /* ForumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D9BA40FB25192E781A120 /* ForumService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,7 @@
 		493CF8AF1F828F8800A27E86 /* PostDetailSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailSections.swift; sourceTree = "<group>"; };
 		494A03521F53F6C90017D912 /* PostsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		494A03541F5408D00017D912 /* PostsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsStore.swift; sourceTree = "<group>"; };
+		4951EBA41F82A32B0020E988 /* PostCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentCell.swift; sourceTree = "<group>"; };
 		49535C251F51938F007A8356 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49535C281F51938F007A8356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49535C2A1F51938F007A8356 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -83,10 +87,12 @@
 		49687AB31F7813FF008285F9 /* PostDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCell.swift; sourceTree = "<group>"; };
 		49687AB81F7816EE008285F9 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 		49687ABA1F781AC0008285F9 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		49DC2A8F1FA0E1AC0021E606 /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		4F5613B3EC096694A4A97B76 /* Pods-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		691378AD24CFCD74FECCAAF0 /* Pods-MVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMTests/Pods-MVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		7514637B825EF943AFC85567 /* Pods_MVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		986821CDC275D311586A01BA /* Pods-MVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMUITests/Pods-MVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BF8D9BA40FB25192E781A120 /* ForumService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumService.swift; sourceTree = "<group>"; };
 		C229FFCA43211DAC957867DD /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		D68E406E9AD4CDECCE1F3F31 /* Pods-MVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMTests/Pods-MVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +182,7 @@
 				49535C2F1F51938F007A8356 /* Assets.xcassets */,
 				49535C561F51AC56007A8356 /* View Controllers */,
 				49535C571F51AC8E007A8356 /* Models */,
+				49DC2A8E1FA0D4970021E606 /* Network */,
 				490EF89D1F52BC0B00423503 /* Stores */,
 				494A03511F53F5F40017D912 /* Helpers */,
 				49535C581F51AC97007A8356 /* Supporting files */,
@@ -271,10 +278,20 @@
 		49687ABC1F782DD0008285F9 /* Table cells */ = {
 			isa = PBXGroup;
 			children = (
-				49687AB31F7813FF008285F9 /* PostDetailCell.swift */,
 				493CF8AF1F828F8800A27E86 /* PostDetailSections.swift */,
+				49687AB31F7813FF008285F9 /* PostDetailCell.swift */,
+				4951EBA41F82A32B0020E988 /* PostCommentCell.swift */,
 			);
 			name = "Table cells";
+			sourceTree = "<group>";
+		};
+		49DC2A8E1FA0D4970021E606 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				49DC2A8F1FA0E1AC0021E606 /* Networker.swift */,
+				BF8D9BA40FB25192E781A120 /* ForumService.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		B7337D225BE346DBE6CBF40B /* Pods */ = {
@@ -367,6 +384,7 @@
 				TargetAttributes = {
 					49535C241F51938F007A8356 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = N926U7H6U9;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -571,8 +589,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MVVM/Pods-MVVM-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -581,8 +603,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -609,12 +635,15 @@
 				49687AB91F7816EE008285F9 /* PostDetailViewModel.swift in Sources */,
 				49687AB41F7813FF008285F9 /* PostDetailCell.swift in Sources */,
 				4962E1511F535FD50006F165 /* PostDetailViewController.swift in Sources */,
+				4951EBA51F82A32B0020E988 /* PostCommentCell.swift in Sources */,
 				494A03551F5408D00017D912 /* PostsStore.swift in Sources */,
 				494A03531F53F6C90017D912 /* PostsViewModel.swift in Sources */,
 				49535C291F51938F007A8356 /* AppDelegate.swift in Sources */,
+				49DC2A901FA0E1AC0021E606 /* Networker.swift in Sources */,
 				491B10151F7570F900E6683D /* Segues.swift in Sources */,
 				4962E15C1F536F010006F165 /* Post.swift in Sources */,
 				4962E1581F53661A0006F165 /* PostCell.swift in Sources */,
+				BF8D9B1913E3A45045568610 /* ForumService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,7 +739,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -754,7 +783,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -767,7 +796,9 @@
 			baseConfigurationReference = C229FFCA43211DAC957867DD /* Pods-MVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N926U7H6U9;
 				INFOPLIST_FILE = MVVM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.mcmobile.MVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -781,7 +812,9 @@
 			baseConfigurationReference = 4F5613B3EC096694A4A97B76 /* Pods-MVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N926U7H6U9;
 				INFOPLIST_FILE = MVVM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.mcmobile.MVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";

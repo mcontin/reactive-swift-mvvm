@@ -23,7 +23,7 @@ class PostsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         postsViewModel.observablePosts
             .bind(to: tableView.rx.items(cellIdentifier: PostCell.kCellIdentifier,
                                          cellType: PostCell.self),
@@ -37,14 +37,13 @@ class PostsViewController: UIViewController {
                                       sender: self.postsViewModel.postId(for: indexPath))
                 }
             }
-            .addDisposableTo(disposeBag)
-        
+            .disposed(by: disposeBag)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segue.showPostDetails,
-           let postId = sender as? Int,
-           let destination = segue.destination as? PostDetailViewController {
+            let destination = segue.destination as? PostDetailViewController,
+            let postId = sender as? Int {
             destination.postId = postId
         }
     }

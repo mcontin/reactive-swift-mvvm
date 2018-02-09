@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RxDataSources
 
 class PostDetailCell: UITableViewCell {
     

@@ -7,12 +7,13 @@
 //
 
 import RxSwift
+import RealmSwift
 
 class PostsViewModel {
 
     private let posts: Variable<[Post]> = Variable([])
     
-    var observablePosts: Observable<[Post]>{
+    var observablePosts: Observable<[Post]> {
         return posts.asObservable()
     }
     
@@ -21,7 +22,8 @@ class PostsViewModel {
     }
     
     private func fetchPosts() {
-        posts.value = PostsStore.getMockPosts()
+        posts.value = PostsStore.retrievePosts()
+        PostsStore.save(posts: posts.value)
     }
     
     func binder(row: Int, element: Post, cell: PostCell) {

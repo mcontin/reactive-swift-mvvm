@@ -12,7 +12,8 @@ extension Realm {
     
     static func safeGet() -> Realm? {
         do {
-            return try Realm()
+            let a = try Realm()
+            return a
         } catch let error {
             debugPrint(error)
         }

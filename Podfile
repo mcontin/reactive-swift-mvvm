@@ -5,8 +5,12 @@ target 'MVVM' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Alamofire
-  pod 'Alamofire', '~> 4.4'
+  # Alamofire wrapper
+  pod 'Moya'
+  pod 'Moya-ObjectMapper'
+
+  # Data/JSON parsing
+#  pod 'ObjectMapper', '~> 2.2'
 
   # RxSwift
   pod 'RxSwift'#,    '~> 3.0'
@@ -45,5 +49,10 @@ post_install do |installer|
                 config.build_settings['SWIFT_VERSION'] = '3.0'
             end
         end
+#        if target.name == 'ObjectMapper'
+#            target.build_configurations.each do |config|
+#                config.build_settings['SWIFT_VERSION'] = '3.1'
+#            end
+#        end
     end
 end
