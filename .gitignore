@@ -4,3 +4,5 @@ MVVM\.xcworkspace/xcuserdata/
 \.DS_Store
 
 \.idea/
+
+R\.generated\.swift

@@ -18,7 +18,7 @@ class User: Object, Mappable {
     @objc dynamic var username = ""
     
     /// Relationships
-    let posts = LinkingObjects(fromType: Post.self, property: "user")
+    let posts = LinkingObjects(fromType: Post.self, property: "author")
     
     override static func primaryKey() -> String? {
         return "id"

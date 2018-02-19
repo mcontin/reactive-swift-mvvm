@@ -2,33 +2,36 @@
 platform :ios, '9.0'
 
 target 'MVVM' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
 
-  # Alamofire wrapper
-  pod 'Moya'
-  pod 'Moya-ObjectMapper'
+    # Alamofire wrapper
+    pod 'Moya/RxSwift'
+    pod 'Moya-ObjectMapper/RxSwift'
 
-  # Data/JSON parsing
-#  pod 'ObjectMapper', '~> 2.2'
+    # Data/JSON parsing
+    #  pod 'ObjectMapper', '~> 2.2'
 
-  # RxSwift
-  pod 'RxSwift'#,    '~> 3.0'
-  pod 'RxCocoa'#,    '~> 3.0'
-  pod 'RxDataSources'#, '~> 1.0'
+    # RxSwift
+    pod 'RxSwift'#,    '~> 3.0'
+    pod 'RxCocoa'#,    '~> 3.0'
+    pod 'RxDataSources'#, '~> 1.0'
 
-  # Realm
-  pod 'RealmSwift'
+    # Realm
+    pod 'RealmSwift'
 
-  target 'MVVMTests' do
+    # R.swift
+    pod 'R.swift'
+
+    target 'MVVMTests' do
     inherit! :search_paths
     # Pods for testing
-  end
+    end
 
-  target 'MVVMUITests' do
+    target 'MVVMUITests' do
     inherit! :search_paths
     # Pods for testing
-  end
+    end
 
 end
 

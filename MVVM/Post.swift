@@ -11,6 +11,10 @@ import ObjectMapper
 
 class Post: Object, Mappable {
     
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
     /// Primary key
     @objc dynamic var id = 0
     
@@ -20,11 +24,8 @@ class Post: Object, Mappable {
     
     /// Relationships
     @objc dynamic var author: User?
-    let comments = LinkingObjects(fromType: Comment.self, property: "post")
     
-    override static func primaryKey() -> String? {
-        return "id"
-    }
+    let comments = LinkingObjects(fromType: Comment.self, property: "post")
     
     required convenience init(map: Map) {
         self.init()

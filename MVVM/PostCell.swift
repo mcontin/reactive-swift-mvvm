@@ -10,10 +10,13 @@ import UIKit
 
 class PostCell: UITableViewCell {
     
-    static let kCellIdentifier = "PostCell"
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var previewLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
     
 }

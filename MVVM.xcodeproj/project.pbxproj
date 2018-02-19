@@ -15,6 +15,8 @@
 		494A03531F53F6C90017D912 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A03521F53F6C90017D912 /* PostsViewModel.swift */; };
 		494A03551F5408D00017D912 /* PostsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A03541F5408D00017D912 /* PostsStore.swift */; };
 		4951EBA51F82A32B0020E988 /* PostCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4951EBA41F82A32B0020E988 /* PostCommentCell.swift */; };
+		4952BDCF202E1FAB00D722D8 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952BDCE202E1FAB00D722D8 /* RxViewController.swift */; };
+		4952BDD2202E20DE00D722D8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952BDD1202E20DD00D722D8 /* R.generated.swift */; };
 		49535C291F51938F007A8356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49535C281F51938F007A8356 /* AppDelegate.swift */; };
 		49535C2B1F51938F007A8356 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49535C2A1F51938F007A8356 /* PostsViewController.swift */; };
 		49535C2E1F51938F007A8356 /* PostsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49535C2C1F51938F007A8356 /* PostsList.storyboard */; };
@@ -32,6 +34,9 @@
 		49687AB41F7813FF008285F9 /* PostDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49687AB31F7813FF008285F9 /* PostDetailCell.swift */; };
 		49687AB91F7816EE008285F9 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49687AB81F7816EE008285F9 /* PostDetailViewModel.swift */; };
 		49687ABB1F781AC0008285F9 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49687ABA1F781AC0008285F9 /* Optional.swift */; };
+		49D0DC922032BF760019275B /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0DC912032BF760019275B /* LocalStore.swift */; };
+		49D0DC952032C12C0019275B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0DC942032C12C0019275B /* API.swift */; };
+		49D0DC972032C1E40019275B /* ForumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0DC962032C1E40019275B /* ForumAPI.swift */; };
 		49DC2A901FA0E1AC0021E606 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DC2A8F1FA0E1AC0021E606 /* Networker.swift */; };
 		6475A5E80F426F09441C7EE5 /* Pods_MVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3867A877A2A3BEF6E0E6F12D /* Pods_MVVMTests.framework */; };
 		BF8D9B1913E3A45045568610 /* ForumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D9BA40FB25192E781A120 /* ForumService.swift */; };
@@ -64,6 +69,8 @@
 		494A03521F53F6C90017D912 /* PostsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		494A03541F5408D00017D912 /* PostsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsStore.swift; sourceTree = "<group>"; };
 		4951EBA41F82A32B0020E988 /* PostCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentCell.swift; sourceTree = "<group>"; };
+		4952BDCE202E1FAB00D722D8 /* RxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
+		4952BDD1202E20DD00D722D8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		49535C251F51938F007A8356 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49535C281F51938F007A8356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49535C2A1F51938F007A8356 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +94,9 @@
 		49687AB31F7813FF008285F9 /* PostDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCell.swift; sourceTree = "<group>"; };
 		49687AB81F7816EE008285F9 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 		49687ABA1F781AC0008285F9 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		49D0DC912032BF760019275B /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
+		49D0DC942032C12C0019275B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		49D0DC962032C1E40019275B /* ForumAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumAPI.swift; sourceTree = "<group>"; };
 		49DC2A8F1FA0E1AC0021E606 /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		4F5613B3EC096694A4A97B76 /* Pods-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		691378AD24CFCD74FECCAAF0 /* Pods-MVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMTests/Pods-MVVMTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,7 +148,8 @@
 		490EF89D1F52BC0B00423503 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
-				494A03541F5408D00017D912 /* PostsStore.swift */,
+				49D0DC902032BF540019275B /* Remotes */,
+				49D0DC8F2032BF4E0019275B /* Locals */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -148,6 +159,7 @@
 			children = (
 				49687AB51F781458008285F9 /* Extensions */,
 				491B10141F7570F900E6683D /* Segues.swift */,
+				4952BDCE202E1FAB00D722D8 /* RxViewController.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -186,6 +198,7 @@
 				490EF89D1F52BC0B00423503 /* Stores */,
 				494A03511F53F5F40017D912 /* Helpers */,
 				49535C581F51AC97007A8356 /* Supporting files */,
+				4952BDD1202E20DD00D722D8 /* R.generated.swift */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -285,9 +298,35 @@
 			name = "Table cells";
 			sourceTree = "<group>";
 		};
+		49D0DC8F2032BF4E0019275B /* Locals */ = {
+			isa = PBXGroup;
+			children = (
+				49D0DC912032BF760019275B /* LocalStore.swift */,
+				494A03541F5408D00017D912 /* PostsStore.swift */,
+			);
+			name = Locals;
+			sourceTree = "<group>";
+		};
+		49D0DC902032BF540019275B /* Remotes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Remotes;
+			sourceTree = "<group>";
+		};
+		49D0DC932032C1210019275B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				49D0DC942032C12C0019275B /* API.swift */,
+				49D0DC962032C1E40019275B /* ForumAPI.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		49DC2A8E1FA0D4970021E606 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				49D0DC932032C1210019275B /* API */,
 				49DC2A8F1FA0E1AC0021E606 /* Networker.swift */,
 				BF8D9BA40FB25192E781A120 /* ForumService.swift */,
 			);
@@ -315,6 +354,7 @@
 			buildConfigurationList = 49535C4D1F519390007A8356 /* Build configuration list for PBXNativeTarget "MVVM" */;
 			buildPhases = (
 				42FC9A8B9D15F93A4E57CD1F /* [CP] Check Pods Manifest.lock */,
+				4952BDD0202E206400D722D8 /* R.swift script */,
 				49535C211F51938F007A8356 /* Sources */,
 				49535C221F51938F007A8356 /* Frameworks */,
 				49535C231F51938F007A8356 /* Resources */,
@@ -379,7 +419,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Mattia;
 				TargetAttributes = {
 					49535C241F51938F007A8356 = {
@@ -483,6 +523,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4952BDD0202E206400D722D8 /* R.swift script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "R.swift script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
 		};
 		75F3B697F19CA01C8E413D32 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -592,6 +646,7 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -606,6 +661,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -629,17 +685,22 @@
 				49535C2B1F51938F007A8356 /* PostsViewController.swift in Sources */,
 				4962E15A1F536D9D0006F165 /* User.swift in Sources */,
 				49687ABB1F781AC0008285F9 /* Optional.swift in Sources */,
+				49D0DC972032C1E40019275B /* ForumAPI.swift in Sources */,
 				493CF8B01F828F8800A27E86 /* PostDetailSections.swift in Sources */,
 				4962E15E1F53719C0006F165 /* Comment.swift in Sources */,
 				493CF8AE1F82884100A27E86 /* Realm.swift in Sources */,
 				49687AB91F7816EE008285F9 /* PostDetailViewModel.swift in Sources */,
+				4952BDD2202E20DE00D722D8 /* R.generated.swift in Sources */,
 				49687AB41F7813FF008285F9 /* PostDetailCell.swift in Sources */,
 				4962E1511F535FD50006F165 /* PostDetailViewController.swift in Sources */,
 				4951EBA51F82A32B0020E988 /* PostCommentCell.swift in Sources */,
 				494A03551F5408D00017D912 /* PostsStore.swift in Sources */,
 				494A03531F53F6C90017D912 /* PostsViewModel.swift in Sources */,
 				49535C291F51938F007A8356 /* AppDelegate.swift in Sources */,
+				49D0DC952032C12C0019275B /* API.swift in Sources */,
+				4952BDCF202E1FAB00D722D8 /* RxViewController.swift in Sources */,
 				49DC2A901FA0E1AC0021E606 /* Networker.swift in Sources */,
+				49D0DC922032BF760019275B /* LocalStore.swift in Sources */,
 				491B10151F7570F900E6683D /* Segues.swift in Sources */,
 				4962E15C1F536F010006F165 /* Post.swift in Sources */,
 				4962E1581F53661A0006F165 /* PostCell.swift in Sources */,
@@ -708,7 +769,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -716,7 +779,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -758,7 +825,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -766,7 +835,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

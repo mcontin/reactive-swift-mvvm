@@ -11,19 +11,36 @@ import RealmSwift
 
 class PostsViewModel {
 
-    private let posts: Variable<[Post]> = Variable([])
+    private let posts = Variable<[Post]>([])
+    
+    private let disposeBag = DisposeBag()
     
     var observablePosts: Observable<[Post]> {
         return posts.asObservable()
     }
     
     init() {
-        fetchPosts()
+        fetchLocalPosts()
+            .andThen(fetchRemotePosts())
+            .subscribe()
+            .disposed(by: disposeBag)
     }
     
-    private func fetchPosts() {
-        posts.value = PostsStore.retrievePosts()
-        PostsStore.save(posts: posts.value)
+    private func fetchLocalPosts() -> Completable {
+        return Completable.create { [unowned self] completable in
+            self.posts.value = LocalStore.retrievePosts()
+            LocalStore.save(posts: self.posts.value)
+            return Disposables.create()
+        }
+    }
+    
+    private func fetchRemotePosts() -> Completable {
+        return Completable.create { [unowned self] completable in
+            print(self.posts.value.first!)
+//            self.posts.value = PostsStore.retrievePosts()
+//            PostsStore.save(posts: self.posts.value)
+            return Disposables.create()
+        }
     }
     
     func binder(row: Int, element: Post, cell: PostCell) {

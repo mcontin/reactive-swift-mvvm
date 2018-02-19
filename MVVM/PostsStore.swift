@@ -9,7 +9,7 @@
 import RealmSwift
 import RxSwift
 
-class PostsStore {
+extension LocalStore {
     
     static func retrievePosts() -> [Post] {
         Networker.fetchPosts()
@@ -25,15 +25,6 @@ class PostsStore {
     
     static func getMockPosts() -> [Post] {
         let user = User()
-        let posts: [Post] = (0..<20).map { index in
-            let tempPost = Post()
-            tempPost.id = index
-            tempPost.author = user
-            tempPost.author?.username = "Poster \(index + 1)"
-            tempPost.title = "This is title number \(index + 1)"
-            tempPost.body = "This is body number \(index + 1)"
-            return tempPost
-        }
         return (0..<20).map { index in
             let tempPost = Post()
             tempPost.id = index

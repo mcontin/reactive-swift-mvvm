@@ -10,22 +10,18 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class PostsViewController: UIViewController {
+class PostsViewController: RxViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     /// View model for the list of posts. Posts are fetched when this is initialized.
-    lazy var postsViewModel: PostsViewModel = {
-        return PostsViewModel()
-    }()
-    
-    private let disposeBag = DisposeBag()
+    private let postsViewModel = PostsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         postsViewModel.observablePosts
-            .bind(to: tableView.rx.items(cellIdentifier: PostCell.kCellIdentifier,
+            .bind(to: tableView.rx.items(cellIdentifier: R.reuseIdentifier.postCell.identifier,
                                          cellType: PostCell.self),
                   curriedArgument: postsViewModel.binder)
             .disposed(by: disposeBag)
