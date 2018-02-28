@@ -9,9 +9,6 @@ target 'MVVM' do
     pod 'Moya/RxSwift'
     pod 'Moya-ObjectMapper/RxSwift'
 
-    # Data/JSON parsing
-    #  pod 'ObjectMapper', '~> 2.2'
-
     # RxSwift
     pod 'RxSwift'#,    '~> 3.0'
     pod 'RxCocoa'#,    '~> 3.0'

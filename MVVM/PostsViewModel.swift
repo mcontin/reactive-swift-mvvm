@@ -7,7 +7,6 @@
 //
 
 import RxSwift
-import RealmSwift
 
 class PostsViewModel {
 
@@ -20,33 +19,54 @@ class PostsViewModel {
     }
     
     init() {
-        fetchLocalPosts()
+        fetchUsers()
+            .andThen(fetchLocalPosts())
             .andThen(fetchRemotePosts())
             .subscribe()
             .disposed(by: disposeBag)
     }
     
+    func fetchUsers() -> Completable {
+        return .create { completable in
+            API.getUsers()
+                .subscribe(onSuccess: { users in
+                    LocalStore.save(objects: users)
+                    completable(.completed)
+                }, onError: { error in
+                    print(error)
+                    completable(.error(error))
+                })
+        }
+    }
+    
     private func fetchLocalPosts() -> Completable {
-        return Completable.create { [unowned self] completable in
-            self.posts.value = LocalStore.retrievePosts()
-            LocalStore.save(posts: self.posts.value)
+        return Completable.create { [weak self] completable in
+            guard let this = self else {
+                return Disposables.create()
+            }
+            
+            this.posts.value = LocalStore.getObjects(ofType: Post.self)
+            LocalStore.save(posts: this.posts.value)
+            completable(.completed)
             return Disposables.create()
         }
     }
     
     private func fetchRemotePosts() -> Completable {
-        return Completable.create { [unowned self] completable in
-            print(self.posts.value.first!)
-//            self.posts.value = PostsStore.retrievePosts()
-//            PostsStore.save(posts: self.posts.value)
-            return Disposables.create()
+        return Completable.create { [weak self] completable in
+            guard let this = self else {
+                return Disposables.create()
+            }
+            return API.getPosts()
+                .subscribe(onSuccess: { posts in
+                    this.posts.value = posts
+                    LocalStore.save(posts: this.posts.value)
+                    completable(.completed)
+                }, onError: { error in
+                    print(error)
+                    completable(.error(error))
+                })
         }
-    }
-    
-    func binder(row: Int, element: Post, cell: PostCell) {
-        cell.authorLabel.text = element.author?.username
-        cell.titleLabel.text = element.title
-        cell.previewLabel.text = element.body
     }
     
     func postId(for indexPath: IndexPath) -> Int? {

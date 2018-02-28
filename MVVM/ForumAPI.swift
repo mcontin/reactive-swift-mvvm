@@ -10,7 +10,6 @@ import RxSwift
 import Moya
 import Moya_ObjectMapper
 
-
 extension API {
     
     static func getPosts() -> Single<[Post]> {
@@ -18,6 +17,13 @@ extension API {
             .request(.getPosts)
             .filterSuccessfulStatusAndRedirectCodes()
             .mapArray(Post.self)
+    }
+    
+    static func getUsers() -> Single<[User]> {
+        return provider.rx
+            .request(.getUsers)
+            .filterSuccessfulStatusAndRedirectCodes()
+            .mapArray(User.self)
     }
     
 }

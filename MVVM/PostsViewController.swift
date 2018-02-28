@@ -20,24 +20,29 @@ class PostsViewController: RxViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.register(R.nib.postCell(), forCellReuseIdentifier: R.reuseIdentifier.postCell.identifier)
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 95
+        
         postsViewModel.observablePosts
             .bind(to: tableView.rx.items(cellIdentifier: R.reuseIdentifier.postCell.identifier,
-                                         cellType: PostCell.self),
-                  curriedArgument: postsViewModel.binder)
+                                         cellType: PostCell.self))
+            { _, post, cell in
+                cell.model = post
+            }
             .disposed(by: disposeBag)
         
         tableView.rx.itemSelected
-            .subscribe { indexPath in
-                indexPath.element.getAs { indexPath in
-                    self.performSegue(withIdentifier: Segue.showPostDetails,
-                                      sender: self.postsViewModel.postId(for: indexPath))
-                }
+            .bind { indexPath in
+                self.performSegue(withIdentifier: R.segue.postsViewController.kSeguePostDetails,
+                                  sender: self.postsViewModel.postId(for: indexPath))
             }
             .disposed(by: disposeBag)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Segue.showPostDetails,
+        if segue.identifier == R.segue.postsViewController.kSeguePostDetails.identifier,
             let destination = segue.destination as? PostDetailViewController,
             let postId = sender as? Int {
             destination.postId = postId

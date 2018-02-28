@@ -11,6 +11,10 @@ import RealmSwift
 
 class User: Object, Mappable {
     
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
     /// Primary key
     @objc dynamic var id = 0
     
@@ -19,10 +23,6 @@ class User: Object, Mappable {
     
     /// Relationships
     let posts = LinkingObjects(fromType: Post.self, property: "author")
-    
-    override static func primaryKey() -> String? {
-        return "id"
-    }
     
     required convenience init(map: Map) {
         self.init()

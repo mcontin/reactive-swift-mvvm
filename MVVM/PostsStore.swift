@@ -11,17 +11,17 @@ import RxSwift
 
 extension LocalStore {
     
-    static func retrievePosts() -> [Post] {
-        Networker.fetchPosts()
-            .subscribe(onNext: { posts in
-                print(posts)
-            }, onError: { error in
-                print(error)
-            })
-        .disposed(by: DisposeBag())
-        
-        return getMockPosts()
-    }
+//    static func retrievePosts() -> [Post] {
+//        Networker.fetchPosts()
+//            .subscribe(onNext: { posts in
+//                print(posts)
+//            }, onError: { error in
+//                print(error)
+//            })
+//        .disposed(by: DisposeBag())
+//        
+//        return getMockPosts()
+//    }
     
     static func getMockPosts() -> [Post] {
         let user = User()

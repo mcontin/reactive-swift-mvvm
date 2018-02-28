@@ -21,54 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XnX-5Z-Vd1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XnX-5Z-Vd1">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="95" id="gp6-6d-Fze" customClass="PostCell" customModule="MVVM" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="95"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gp6-6d-Fze" id="wZj-8k-hV7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the title of the post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9L-jv-xym">
-                                                    <rect key="frame" x="15" y="15" width="221" height="23"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinco Pallino" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSh-eB-Fdu">
-                                                    <rect key="frame" x="280" y="19" width="77" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an excerpt from the post which is very long and will be cut..." lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbR-7Q-33I">
-                                                    <rect key="frame" x="15" y="48" width="345" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstItem="Y9L-jv-xym" firstAttribute="leading" secondItem="wZj-8k-hV7" secondAttribute="leading" constant="15" id="HmN-AT-1Wu"/>
-                                                <constraint firstItem="iSh-eB-Fdu" firstAttribute="top" secondItem="wZj-8k-hV7" secondAttribute="top" constant="19" id="Ib9-wO-Xae"/>
-                                                <constraint firstAttribute="trailing" secondItem="iSh-eB-Fdu" secondAttribute="trailing" constant="18" id="O09-KZ-vjl"/>
-                                                <constraint firstAttribute="trailing" secondItem="HbR-7Q-33I" secondAttribute="trailing" constant="15" id="XWb-JC-dID"/>
-                                                <constraint firstItem="HbR-7Q-33I" firstAttribute="top" secondItem="Y9L-jv-xym" secondAttribute="bottom" constant="10" id="nzs-wn-Jto"/>
-                                                <constraint firstItem="HbR-7Q-33I" firstAttribute="leading" secondItem="wZj-8k-hV7" secondAttribute="leading" constant="15" id="yoC-FK-mFx"/>
-                                                <constraint firstItem="Y9L-jv-xym" firstAttribute="top" secondItem="wZj-8k-hV7" secondAttribute="top" constant="15" id="zK5-tA-9qe"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="authorLabel" destination="iSh-eB-Fdu" id="H7V-gO-AKQ"/>
-                                            <outlet property="previewLabel" destination="HbR-7Q-33I" id="kNG-1U-wB8"/>
-                                            <outlet property="titleLabel" destination="Y9L-jv-xym" id="jeu-lh-M8D"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="105" id="Whl-7v-uDt" customClass="PostCell" customModule="MVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Whl-7v-uDt" id="ZRH-ZF-BYp">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the title of the post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="stS-a5-zoL">
+                        <rect key="frame" x="15" y="15" width="221" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinco Pallino" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgI-jW-PLP">
+                        <rect key="frame" x="280" y="19" width="77" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an excerpt from the post which is very long and will be cut..." lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbY-H3-TTU">
+                        <rect key="frame" x="15" y="48" width="345" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="CbY-H3-TTU" secondAttribute="trailing" constant="15" id="5XY-0S-oNG"/>
+                    <constraint firstAttribute="trailing" secondItem="JgI-jW-PLP" secondAttribute="trailing" constant="18" id="G60-VX-JKZ"/>
+                    <constraint firstItem="stS-a5-zoL" firstAttribute="leading" secondItem="ZRH-ZF-BYp" secondAttribute="leading" constant="15" id="Hpv-3c-h1b"/>
+                    <constraint firstItem="JgI-jW-PLP" firstAttribute="top" secondItem="ZRH-ZF-BYp" secondAttribute="top" constant="19" id="Seh-DQ-a0w"/>
+                    <constraint firstItem="CbY-H3-TTU" firstAttribute="leading" secondItem="ZRH-ZF-BYp" secondAttribute="leading" constant="15" id="W2i-C3-Peu"/>
+                    <constraint firstItem="CbY-H3-TTU" firstAttribute="top" secondItem="stS-a5-zoL" secondAttribute="bottom" constant="10" id="a5Z-U8-VuT"/>
+                    <constraint firstItem="stS-a5-zoL" firstAttribute="top" secondItem="ZRH-ZF-BYp" secondAttribute="top" constant="15" id="gFs-pN-kxK"/>
+                    <constraint firstAttribute="bottom" secondItem="CbY-H3-TTU" secondAttribute="bottom" constant="15" id="mjb-9J-x8W"/>
+                    <constraint firstItem="JgI-jW-PLP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="stS-a5-zoL" secondAttribute="trailing" constant="10" id="vQ7-sv-Fhz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="authorLabel" destination="JgI-jW-PLP" id="XeB-es-ysZ"/>
+                <outlet property="previewLabel" destination="CbY-H3-TTU" id="Ypb-SE-PvM"/>
+                <outlet property="titleLabel" destination="stS-a5-zoL" id="kd8-bf-qXL"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="57"/>
+        </tableViewCell>
+    </objects>
+</document>

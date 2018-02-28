@@ -34,6 +34,11 @@
 		49687AB41F7813FF008285F9 /* PostDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49687AB31F7813FF008285F9 /* PostDetailCell.swift */; };
 		49687AB91F7816EE008285F9 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49687AB81F7816EE008285F9 /* PostDetailViewModel.swift */; };
 		49687ABB1F781AC0008285F9 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49687ABA1F781AC0008285F9 /* Optional.swift */; };
+		49B883822046CDAE00AFEF7B /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B883812046CDAE00AFEF7B /* UILabel.swift */; };
+		49B883842046FA1500AFEF7B /* UsersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B883832046FA1500AFEF7B /* UsersStore.swift */; };
+		49B883862046FB5F00AFEF7B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B883852046FB5F00AFEF7B /* Error.swift */; };
+		49B883882046FC4400AFEF7B /* RealmResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B883872046FC4400AFEF7B /* RealmResults.swift */; };
+		49B8838A2047055C00AFEF7B /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B883892047055C00AFEF7B /* PostCell.xib */; };
 		49D0DC922032BF760019275B /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0DC912032BF760019275B /* LocalStore.swift */; };
 		49D0DC952032C12C0019275B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0DC942032C12C0019275B /* API.swift */; };
 		49D0DC972032C1E40019275B /* ForumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0DC962032C1E40019275B /* ForumAPI.swift */; };
@@ -94,6 +99,11 @@
 		49687AB31F7813FF008285F9 /* PostDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCell.swift; sourceTree = "<group>"; };
 		49687AB81F7816EE008285F9 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 		49687ABA1F781AC0008285F9 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		49B883812046CDAE00AFEF7B /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		49B883832046FA1500AFEF7B /* UsersStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersStore.swift; sourceTree = "<group>"; };
+		49B883852046FB5F00AFEF7B /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		49B883872046FC4400AFEF7B /* RealmResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmResults.swift; sourceTree = "<group>"; };
+		49B883892047055C00AFEF7B /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		49D0DC912032BF760019275B /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		49D0DC942032C12C0019275B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		49D0DC962032C1E40019275B /* ForumAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumAPI.swift; sourceTree = "<group>"; };
@@ -253,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				49535C2C1F51938F007A8356 /* PostsList.storyboard */,
+				49B883892047055C00AFEF7B /* PostCell.xib */,
 				49535C2A1F51938F007A8356 /* PostsViewController.swift */,
 				494A03521F53F6C90017D912 /* PostsViewModel.swift */,
 				4962E1571F53661A0006F165 /* PostCell.swift */,
@@ -284,6 +295,9 @@
 			children = (
 				49687ABA1F781AC0008285F9 /* Optional.swift */,
 				493CF8AD1F82884100A27E86 /* Realm.swift */,
+				49B883812046CDAE00AFEF7B /* UILabel.swift */,
+				49B883852046FB5F00AFEF7B /* Error.swift */,
+				49B883872046FC4400AFEF7B /* RealmResults.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -303,6 +317,7 @@
 			children = (
 				49D0DC912032BF760019275B /* LocalStore.swift */,
 				494A03541F5408D00017D912 /* PostsStore.swift */,
+				49B883832046FA1500AFEF7B /* UsersStore.swift */,
 			);
 			name = Locals;
 			sourceTree = "<group>";
@@ -469,6 +484,7 @@
 			files = (
 				49535C331F51938F007A8356 /* LaunchScreen.storyboard in Resources */,
 				49687AB21F781027008285F9 /* PostDetail.storyboard in Resources */,
+				49B8838A2047055C00AFEF7B /* PostCell.xib in Resources */,
 				49535C301F51938F007A8356 /* Assets.xcassets in Resources */,
 				49535C2E1F51938F007A8356 /* PostsList.storyboard in Resources */,
 			);
@@ -686,6 +702,9 @@
 				4962E15A1F536D9D0006F165 /* User.swift in Sources */,
 				49687ABB1F781AC0008285F9 /* Optional.swift in Sources */,
 				49D0DC972032C1E40019275B /* ForumAPI.swift in Sources */,
+				49B883822046CDAE00AFEF7B /* UILabel.swift in Sources */,
+				49B883842046FA1500AFEF7B /* UsersStore.swift in Sources */,
+				49B883862046FB5F00AFEF7B /* Error.swift in Sources */,
 				493CF8B01F828F8800A27E86 /* PostDetailSections.swift in Sources */,
 				4962E15E1F53719C0006F165 /* Comment.swift in Sources */,
 				493CF8AE1F82884100A27E86 /* Realm.swift in Sources */,
@@ -702,6 +721,7 @@
 				49DC2A901FA0E1AC0021E606 /* Networker.swift in Sources */,
 				49D0DC922032BF760019275B /* LocalStore.swift in Sources */,
 				491B10151F7570F900E6683D /* Segues.swift in Sources */,
+				49B883882046FC4400AFEF7B /* RealmResults.swift in Sources */,
 				4962E15C1F536F010006F165 /* Post.swift in Sources */,
 				4962E1581F53661A0006F165 /* PostCell.swift in Sources */,
 				BF8D9B1913E3A45045568610 /* ForumService.swift in Sources */,
