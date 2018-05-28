@@ -10,10 +10,14 @@ import UIKit
 
 class PostDetailCell: UITableViewCell {
     
-    static let kCellIdentifier = "PostDetailCell"
-    
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelAuthor: UILabel!
     @IBOutlet weak var labelBody: UILabel!
+    
+    func setup(with post: Post) {
+        labelTitle.text = post.title
+        labelAuthor.text = post.author?.username
+        labelBody.text = post.body
+    }
     
 }

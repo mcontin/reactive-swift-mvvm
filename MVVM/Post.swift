@@ -7,9 +7,8 @@
 //
 
 import RealmSwift
-import ObjectMapper
 
-class Post: Object, Mappable {
+class Post: Object {
     
     override static func primaryKey() -> String? {
         return "id"
@@ -26,21 +25,14 @@ class Post: Object, Mappable {
     @objc dynamic var author: User?
     
     let comments = LinkingObjects(fromType: Comment.self, property: "post")
-    
-    required convenience init(map: Map) {
+
+    convenience init(from json: PostJSON) {
         self.init()
-    }
-    
-    func mapping(map: Map) {
-        id <- map["id"]
-        title <- map["title"]
-        body <- map["body"]
+        id = json.id
+        title = json.title
+        body = json.body
         
-        var userId = -1
-        userId <- map["userId"]
-        let realm = Realm.unsafeGet()
-        let user = realm.object(ofType: User.self, forPrimaryKey: userId)
-        author = user
+        author = LocalStore.getObject(type: User.self, for: json.userId)
     }
     
 }

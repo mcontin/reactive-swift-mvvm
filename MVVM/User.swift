@@ -6,10 +6,9 @@
 //  Copyright © 2017 Mattia. All rights reserved.
 //
 
-import ObjectMapper
 import RealmSwift
 
-class User: Object, Mappable {
+class User: Object {
     
     override static func primaryKey() -> String? {
         return "id"
@@ -24,13 +23,10 @@ class User: Object, Mappable {
     /// Relationships
     let posts = LinkingObjects(fromType: Post.self, property: "author")
     
-    required convenience init(map: Map) {
+    convenience init(from json: UserJSON) {
         self.init()
-    }
-    
-    func mapping(map: Map) {
-        id <- map["id"]
-        username <- map["username"]
+        id = json.id
+        username = json.username
     }
     
 }

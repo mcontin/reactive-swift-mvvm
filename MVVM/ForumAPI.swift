@@ -8,22 +8,28 @@
 
 import RxSwift
 import Moya
-import Moya_ObjectMapper
 
 extension API {
     
-    static func getPosts() -> Single<[Post]> {
+    static func getPosts() -> Single<[PostJSON]> {
         return provider.rx
             .request(.getPosts)
             .filterSuccessfulStatusAndRedirectCodes()
-            .mapArray(Post.self)
+            .map([PostJSON].self)
     }
     
-    static func getUsers() -> Single<[User]> {
+    static func getUsers() -> Single<[UserJSON]> {
         return provider.rx
             .request(.getUsers)
             .filterSuccessfulStatusAndRedirectCodes()
-            .mapArray(User.self)
+            .map([UserJSON].self)
+    }
+    
+    static func getComments(for postId: Int) -> Single<[CommentJSON]> {
+        return provider.rx
+            .request(.getPostComments(postId: postId))
+            .filterSuccessfulStatusAndRedirectCodes()
+            .map([CommentJSON].self)
     }
     
 }

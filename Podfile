@@ -1,24 +1,24 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
 target 'MVVM' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
 
     # Alamofire wrapper
-    pod 'Moya/RxSwift'
-    pod 'Moya-ObjectMapper/RxSwift'
+    pod 'Moya/RxSwift', '~> 11.0'
 
     # RxSwift
-    pod 'RxSwift'#,    '~> 3.0'
-    pod 'RxCocoa'#,    '~> 3.0'
-    pod 'RxDataSources'#, '~> 1.0'
+    pod 'RxCocoa',       '~> 4.1'
+    pod 'RxDataSources', '~> 3.0'
 
     # Realm
-    pod 'RealmSwift'
+    pod 'RealmSwift', '~> 3.5'
 
     # R.swift
-    pod 'R.swift'
+    pod 'R.swift', '4.0.0'
 
     target 'MVVMTests' do
     inherit! :search_paths
@@ -30,29 +30,4 @@ target 'MVVM' do
     # Pods for testing
     end
 
-end
-
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        if target.name == 'RxSwift'
-            target.build_configurations.each do |config|
-                config.build_settings['SWIFT_VERSION'] = '3.0'
-            end
-        end
-        if target.name == 'RxCocoa'
-            target.build_configurations.each do |config|
-                config.build_settings['SWIFT_VERSION'] = '3.0'
-            end
-        end
-        if target.name == 'RxDataSources'
-            target.build_configurations.each do |config|
-                config.build_settings['SWIFT_VERSION'] = '3.0'
-            end
-        end
-#        if target.name == 'ObjectMapper'
-#            target.build_configurations.each do |config|
-#                config.build_settings['SWIFT_VERSION'] = '3.1'
-#            end
-#        end
-    end
 end

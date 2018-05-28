@@ -6,10 +6,13 @@
 //  Copyright © 2017 Mattia. All rights reserved.
 //
 
-import ObjectMapper
 import RealmSwift
 
-class Comment: Object, Mappable {
+class Comment: Object {
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
     
     /// Primary key
     @objc dynamic var id = 0
@@ -22,25 +25,15 @@ class Comment: Object, Mappable {
     /// Relationships
     @objc dynamic var post: Post?
     
-    override static func primaryKey() -> String? {
-        return "id"
-    }
-    
-    required convenience init(map: Map) {
+    convenience init(with json: CommentJSON) {
         self.init()
-    }
-    
-    func mapping(map: Map) {
-        id <- map["id"]
-        name <- map["name"]
-        email <- map["email"]
-        body <- map["body"]
         
-        var postId = -1
-        postId <- map["postId"]
-        let realm = Realm.unsafeGet()
-        let localPost = realm.object(ofType: Post.self, forPrimaryKey: postId)
-        post = localPost
+        id = json.id
+        name = json.name
+        email = json.email
+        body = json.body
+        
+        post = LocalStore.getObject(type: Post.self, for: json.postId)
     }
     
 }

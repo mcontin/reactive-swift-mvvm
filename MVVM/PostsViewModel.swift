@@ -7,10 +7,11 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class PostsViewModel {
 
-    private let posts = Variable<[Post]>([])
+    private let posts = BehaviorRelay<[Post]>(value: [])
     
     private let disposeBag = DisposeBag()
     
@@ -27,44 +28,46 @@ class PostsViewModel {
     }
     
     func fetchUsers() -> Completable {
-        return .create { completable in
+        return .create { observer in
             API.getUsers()
-                .subscribe(onSuccess: { users in
-                    LocalStore.save(objects: users)
-                    completable(.completed)
+                .subscribe(onSuccess: { jsonUsers in
+                    LocalStore.save(objects: jsonUsers.map { User(from: $0) })
+                    observer(.completed)
                 }, onError: { error in
                     print(error)
-                    completable(.error(error))
+                    observer(.error(error))
                 })
         }
     }
     
     private func fetchLocalPosts() -> Completable {
-        return Completable.create { [weak self] completable in
+        return .create { [weak self] observer in
             guard let this = self else {
                 return Disposables.create()
             }
             
-            this.posts.value = LocalStore.getObjects(ofType: Post.self)
-            LocalStore.save(posts: this.posts.value)
-            completable(.completed)
+            this.posts.accept(LocalStore.getObjects(ofType: Post.self))
+            LocalStore.save(objects: this.posts.value)
+            observer(.completed)
             return Disposables.create()
         }
     }
     
     private func fetchRemotePosts() -> Completable {
-        return Completable.create { [weak self] completable in
-            guard let this = self else {
-                return Disposables.create()
-            }
+        return .create { [weak self] observer in
             return API.getPosts()
-                .subscribe(onSuccess: { posts in
-                    this.posts.value = posts
-                    LocalStore.save(posts: this.posts.value)
-                    completable(.completed)
+                .subscribe(onSuccess: { jsonPosts in
+                    guard let this = self else {
+                        observer(.error(NSError.with(message: "Self got deallocated during the network call :/")))
+                        return
+                    }
+                    
+                    this.posts.accept(jsonPosts.map { Post(from: $0) })
+                    LocalStore.save(objects: this.posts.value)
+                    observer(.completed)
                 }, onError: { error in
                     print(error)
-                    completable(.error(error))
+                    observer(.error(error))
                 })
         }
     }
@@ -78,4 +81,5 @@ class PostsViewModel {
         
         return posts.value[index].id
     }
+    
 }

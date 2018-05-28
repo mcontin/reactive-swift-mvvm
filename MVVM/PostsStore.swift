@@ -9,19 +9,8 @@
 import RealmSwift
 import RxSwift
 
-extension LocalStore {
-    
-//    static func retrievePosts() -> [Post] {
-//        Networker.fetchPosts()
-//            .subscribe(onNext: { posts in
-//                print(posts)
-//            }, onError: { error in
-//                print(error)
-//            })
-//        .disposed(by: DisposeBag())
-//        
-//        return getMockPosts()
-//    }
+typealias PostsStore = LocalStore
+extension PostsStore {
     
     static func getMockPosts() -> [Post] {
         let user = User()
@@ -34,37 +23,6 @@ extension LocalStore {
             tempPost.body = "This is body number \(index + 1)"
             return tempPost
         }
-    }
-    
-    @discardableResult
-    static func save(post: Post) -> Bool {
-        let realm = Realm.unsafeGet()
-        
-        do {
-            try realm.write {
-                realm.add(post, update: true)
-            }
-        } catch let error {
-            debugPrint(error)
-            return false
-        }
-        
-        return true
-    }
-    
-    @discardableResult
-    static func save(posts: [Post]) -> Bool {
-        do {
-            let realm = Realm.safeGet()
-            try realm?.write {
-                realm?.add(posts, update: true)
-            }
-        } catch let error {
-            debugPrint(error)
-            return false
-        }
-        
-        return true
     }
     
 }

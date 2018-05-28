@@ -10,6 +10,12 @@ import UIKit
 
 class PostCommentCell: UITableViewCell {
 
-    static let kCellIdentifier = "PostCommentCell"
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
+    
+    func setup(with comment: Comment) {
+        usernameLabel.text = comment.name
+        commentLabel.text = comment.body
+    }
     
 }

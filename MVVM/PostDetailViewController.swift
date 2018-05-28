@@ -15,63 +15,64 @@ class PostDetailViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let dataSource = RxTableViewSectionedReloadDataSource<PostDetailSections>(configureCell: { _, _, _, _ in fatalError("Configure cell not implemented.") })
-    
-    let realm = Realm.unsafeGet()
-    
     let kPostSection = 0
     let kCommentsSection = 1
     var postId = -1
 
     private let disposeBag = DisposeBag()
+    private let viewModel = PostDetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
-        tableView.rx
-            .setDelegate(self)
-            .disposed(by: disposeBag)
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 300 // arbitrary value, it's actually calculated based on constraints
+        tableView.register(R.nib.postDetailCell)
+        tableView.register(R.nib.postCommentCell)
         
-        let post = realm.object(ofType: Post.self, forPrimaryKey: postId)
+        viewModel.postId = postId
         
-        post.getAs { post in
-            let sections = [
-                PostDetailSections.detailSection(header: "details", items: [.post(customData: post)]),
-                PostDetailSections.commentsSection(header: "comments", items: [])
-            ]
-            
-            dataSource.configureCell = { dataSource, tableView, indexPath, item  -> UITableViewCell in
-                switch item {
-                case .post(let post):
-                    let cell = tableView.dequeueReusableCell(withIdentifier: PostDetailCell.kCellIdentifier, for: indexPath) as! PostDetailCell
-                    cell.labelTitle.text = post.title
-                    cell.labelAuthor.text = post.author?.username
-                    cell.labelBody.text = post.body
-                    return cell
-                case .comment(_):
-                    let cell = tableView.dequeueReusableCell(withIdentifier: PostCommentCell.kCellIdentifier, for: indexPath) as! PostCommentCell
-                    return cell
+        fetchData()
+    }
+    
+    private func fetchData() {
+        viewModel.fetchComments()
+            .subscribe(onCompleted: {
+                let dataSource = RxTableViewSectionedReloadDataSource<PostDetailSections>(configureCell: { _, tableView, indexPath, section  -> UITableViewCell in
+                    switch section {
+                    case .post(let post):
+                        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.postDetailCell, for: indexPath) else {
+                            return UITableViewCell()
+                        }
+                        cell.setup(with: post)
+                        return cell
+                    case .comment(let comment):
+                        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.postCommentCell, for: indexPath) else {
+                            return UITableViewCell()
+                        }
+                        cell.setup(with: comment)
+                        return cell
+                    }
+                })
+                
+                guard let post = LocalStore.getObject(type: Post.self, for: self.postId) else {
+                    self.navigationController?.popViewController(animated: true)
+                    return
                 }
-            }
-            
-            Observable.just(sections)
-                .bind(to: tableView.rx.items(dataSource: dataSource))
-                .disposed(by: disposeBag)
-        }
+                
+                let sections = [
+                    PostDetailSections.detailSection(header: "details", items: [.post(customData: post)]),
+                    PostDetailSections.commentsSection(header: "comments", items: self.viewModel.comments.value.map { Row.comment(string: $0) })
+                ]
+                
+                Observable.just(sections)
+                    .bind(to: self.tableView.rx.items(dataSource: dataSource))
+                    .disposed(by: self.disposeBag)
+            }, onError: { error in
+                
+            })
+            .disposed(by: disposeBag)
     }
 
-}
-
-extension PostDetailViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0:
-            return 350
-        default:
-            return 40
-        }
-    }
-    
 }

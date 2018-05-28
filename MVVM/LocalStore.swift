@@ -34,11 +34,15 @@ class LocalStore {
         }
     }
     
+    static func getObject<T: Object, KeyType>(type: T.Type, for primaryKey: KeyType) -> T? {
+        return Realm.safeGet()?.object(ofType: type, forPrimaryKey: primaryKey)
+    }
+    
     static func getObjects<T: Object>(ofType: T.Type) -> [T] {
-            guard let realm = Realm.safeGet() else {
-                return []
-            }
-            return realm.objects(T.self).array
+        guard let realm = Realm.safeGet() else {
+            return []
+        }
+        return realm.objects(T.self).array
     }
     
 }

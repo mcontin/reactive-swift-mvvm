@@ -7,9 +7,12 @@
 //
 
 import XCTest
+import RxSwift
 @testable import MVVM
 
 class MVVMTests: XCTestCase {
+    
+    let disposeBag = DisposeBag()
     
     override func setUp() {
         super.setUp()
@@ -21,9 +24,18 @@ class MVVMTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testMapArray() {
+        let expectation = XCTestExpectation(description: "Map a JSON with an array as root")
+
+        API.getPosts()
+            .subscribe(onSuccess: { posts in
+                expectation.fulfill()
+            }, onError: { error in
+                print(error)
+            })
+            .disposed(by: disposeBag)
+        
+        wait(for: [expectation], timeout: 5)
     }
     
     func testPerformanceExample() {

@@ -8,7 +8,8 @@
 
 import Foundation
 
-extension LocalStore {
+typealias UsersStore = LocalStore
+extension UsersStore {
     
     
     

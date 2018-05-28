@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostDetailCell" rowHeight="316" id="bdV-Cj-i8f" customClass="PostDetailCell" customModule="MVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="316"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bdV-Cj-i8f" id="CfA-g5-bkg">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="315.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A title for this post which may be actually very long" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWq-OK-bXD">
+                        <rect key="frame" x="20" y="20" width="335" height="45.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The author of this post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNW-ua-vrg">
+                        <rect key="frame" x="217.5" y="75.5" width="147.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpO-A5-P8c">
+                        <rect key="frame" x="16" y="109" width="343" height="186.5"/>
+                        <string key="text">body of the post which might be veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long t be veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long t be veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery long</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="oWq-OK-bXD" secondAttribute="trailing" constant="20" id="1ZF-Ey-Q2M"/>
+                    <constraint firstAttribute="trailing" secondItem="wpO-A5-P8c" secondAttribute="trailing" constant="16" id="6dO-pJ-whm"/>
+                    <constraint firstItem="wpO-A5-P8c" firstAttribute="top" secondItem="lNW-ua-vrg" secondAttribute="bottom" constant="16" id="9fb-C7-N6L"/>
+                    <constraint firstAttribute="bottom" secondItem="wpO-A5-P8c" secondAttribute="bottom" constant="20" id="NUe-7G-hby"/>
+                    <constraint firstItem="lNW-ua-vrg" firstAttribute="top" secondItem="oWq-OK-bXD" secondAttribute="bottom" constant="10" id="QuS-T1-aOH"/>
+                    <constraint firstAttribute="trailing" secondItem="lNW-ua-vrg" secondAttribute="trailing" constant="10" id="hSi-lc-7vE"/>
+                    <constraint firstItem="oWq-OK-bXD" firstAttribute="leading" secondItem="CfA-g5-bkg" secondAttribute="leading" constant="20" id="lgl-ew-MKP"/>
+                    <constraint firstItem="oWq-OK-bXD" firstAttribute="top" secondItem="CfA-g5-bkg" secondAttribute="top" constant="20" id="v2Q-ke-xng"/>
+                    <constraint firstItem="wpO-A5-P8c" firstAttribute="leading" secondItem="CfA-g5-bkg" secondAttribute="leading" constant="16" id="vos-t8-g65"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="labelAuthor" destination="lNW-ua-vrg" id="5pl-9x-RbI"/>
+                <outlet property="labelBody" destination="wpO-A5-P8c" id="dE0-vW-gQC"/>
+                <outlet property="labelTitle" destination="oWq-OK-bXD" id="Xph-we-VA0"/>
+            </connections>
+            <point key="canvasLocation" x="21.5" y="342"/>
+        </tableViewCell>
+    </objects>
+</document>
