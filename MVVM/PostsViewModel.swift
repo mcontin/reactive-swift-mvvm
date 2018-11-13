@@ -39,13 +39,13 @@ class PostsViewModel {
                 })
         }
     }
-    
+	
     private func fetchLocalPosts() -> Completable {
         return .create { [weak self] observer in
             guard let this = self else {
                 return Disposables.create()
             }
-            
+			
             this.posts.accept(LocalStore.getObjects(ofType: Post.self))
             LocalStore.save(objects: this.posts.value)
             observer(.completed)
@@ -71,7 +71,7 @@ class PostsViewModel {
                 })
         }
     }
-    
+	
     func postId(for indexPath: IndexPath) -> Int? {
         let index = indexPath.row
         

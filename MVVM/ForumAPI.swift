@@ -9,6 +9,11 @@
 import RxSwift
 import Moya
 
+fileprivate struct BackendError: Error, Codable {
+	let msg: String
+	
+}
+
 extension API {
     
     static func getPosts() -> Single<[PostJSON]> {
@@ -16,6 +21,23 @@ extension API {
             .request(.getPosts)
             .filterSuccessfulStatusAndRedirectCodes()
             .map([PostJSON].self)
+			
+			
+//			.catchError { error -> PrimitiveSequence<SingleTrait, [PostJSON]> in
+//				return .create { single -> Disposable in
+//					guard let moyaError = error as? MoyaError else {
+//						single(.error(error))
+//						return Disposables.create()
+//					}
+//					do {
+//						let a = try moyaError.response?.map(BackendError.self)
+//						single(.error(a ?? error))
+//					} catch {
+//						single(.error(error))
+//					}
+//					return Disposables.create()
+//				}
+//			}
     }
     
     static func getUsers() -> Single<[UserJSON]> {

@@ -44,6 +44,7 @@
 		49D0DC972032C1E40019275B /* ForumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0DC962032C1E40019275B /* ForumAPI.swift */; };
 		6475A5E80F426F09441C7EE5 /* Pods_MVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3867A877A2A3BEF6E0E6F12D /* Pods_MVVMTests.framework */; };
 		BF8D9B1913E3A45045568610 /* ForumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D9BA40FB25192E781A120 /* ForumService.swift */; };
+		F886B32A2190BBDF00751686 /* AlamofireForumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F886B3292190BBDF00751686 /* AlamofireForumAPI.swift */; };
 		F8E178B720BC1A7600661A45 /* UserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178B620BC1A7600661A45 /* UserJSON.swift */; };
 		F8E178B920BC1CA500661A45 /* PostJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178B820BC1CA500661A45 /* PostJSON.swift */; };
 		F8E178BB20BC1DCE00661A45 /* CommentJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178BA20BC1DCE00661A45 /* CommentJSON.swift */; };
@@ -118,6 +119,7 @@
 		BF8D9BA40FB25192E781A120 /* ForumService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumService.swift; sourceTree = "<group>"; };
 		C229FFCA43211DAC957867DD /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		D68E406E9AD4CDECCE1F3F31 /* Pods-MVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMTests/Pods-MVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F886B3292190BBDF00751686 /* AlamofireForumAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireForumAPI.swift; sourceTree = "<group>"; };
 		F8E178B620BC1A7600661A45 /* UserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJSON.swift; sourceTree = "<group>"; };
 		F8E178B820BC1CA500661A45 /* PostJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJSON.swift; sourceTree = "<group>"; };
 		F8E178BA20BC1DCE00661A45 /* CommentJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentJSON.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 			children = (
 				49D0DC942032C12C0019275B /* API.swift */,
 				49D0DC962032C1E40019275B /* ForumAPI.swift */,
+				F886B3292190BBDF00751686 /* AlamofireForumAPI.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				49B883842046FA1500AFEF7B /* UsersStore.swift in Sources */,
 				49B883862046FB5F00AFEF7B /* Error.swift in Sources */,
 				493CF8B01F828F8800A27E86 /* PostDetailSections.swift in Sources */,
+				F886B32A2190BBDF00751686 /* AlamofireForumAPI.swift in Sources */,
 				4962E15E1F53719C0006F165 /* Comment.swift in Sources */,
 				493CF8AE1F82884100A27E86 /* Realm.swift in Sources */,
 				49687AB91F7816EE008285F9 /* PostDetailViewModel.swift in Sources */,
@@ -779,6 +783,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -829,6 +834,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -845,7 +851,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.mcmobile.MVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -861,7 +867,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.mcmobile.MVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -877,7 +883,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.mcmobile.MVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM.app/MVVM";
 			};
 			name = Debug;
@@ -894,7 +900,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.mcmobile.MVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM.app/MVVM";
 			};
 			name = Release;
@@ -909,7 +915,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.mcmobile.MVVMUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = MVVM;
 			};
 			name = Debug;
@@ -924,7 +930,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.mcmobile.MVVMUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = MVVM;
 			};
 			name = Release;

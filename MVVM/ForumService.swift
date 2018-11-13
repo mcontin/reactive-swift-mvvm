@@ -16,9 +16,15 @@ enum ForumService {
 }
 
 extension ForumService: TargetType {
+	
+	private var testEnabled: Bool { return true }
 
     var baseURL: URL {
-        return URL(string: "https://jsonplaceholder.typicode.com")!
+		if testEnabled {
+			return URL(string: "http://demo0009797.mockable.io")!
+		} else {
+			return URL(string: "https://jsonplaceholder.typicode.com")!
+		}
     }
 
     var path: String {
