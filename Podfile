@@ -4,18 +4,20 @@ platform :ios, '9.0'
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
 target 'MVVM' do
+
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
 
-    # Alamofire wrapper
+    # Alamofire wrapper +  RxSwift bindings
     pod 'Moya/RxSwift', '~> 11.0'
+	pod 'MoyaSugar', :git => 'https://github.com/mcontin/MoyaSugar.git', :tag => '1.2.0'
 
     # RxSwift
     pod 'RxCocoa',       '~> 4.1'
     pod 'RxDataSources', '~> 3.0'
 
     # Realm
-    pod 'RealmSwift', '~> 3.5'
+    pod 'RealmSwift', '~> 3.0'
 
     # R.swift
     pod 'R.swift', '4.0.0'

@@ -43,34 +43,41 @@ class PostDetailViewController: UIViewController {
                     switch section {
                     case .post(let post):
                         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.postDetailCell, for: indexPath) else {
-                            return UITableViewCell()
+                            fatalError("Couldn't dequeue a PostDetailCell")
                         }
                         cell.setup(with: post)
                         return cell
                     case .comment(let comment):
                         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.postCommentCell, for: indexPath) else {
-                            return UITableViewCell()
+                            fatalError("Couldn't dequeue a PostCommentCell")
                         }
                         cell.setup(with: comment)
                         return cell
                     }
                 })
-                
+				
+				dataSource.titleForHeaderInSection = { dataSource, index in
+					if index == 1 {
+						return "Comments"
+					}
+					return nil
+				}
+				
                 guard let post = LocalStore.getObject(type: Post.self, for: self.postId) else {
                     self.navigationController?.popViewController(animated: true)
                     return
                 }
                 
                 let sections = [
-                    PostDetailSections.detailSection(header: "details", items: [.post(customData: post)]),
-                    PostDetailSections.commentsSection(header: "comments", items: self.viewModel.comments.value.map { Row.comment(string: $0) })
+                    PostDetailSections.detailSection(header: "Details", items: [.post(customData: post)]),
+                    PostDetailSections.commentsSection(header: "Comments", items: self.viewModel.comments.value.map { Row.comment(string: $0) })
                 ]
                 
                 Observable.just(sections)
                     .bind(to: self.tableView.rx.items(dataSource: dataSource))
                     .disposed(by: self.disposeBag)
-            }, onError: { error in
-                
+            }, onError: { [weak self] error in
+                self?.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
     }

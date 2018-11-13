@@ -49,12 +49,12 @@ extension ForumService: TargetType {
         return .requestPlain
     }
 
-    var sampleData: Data {
-        return Data()
-    }
-
     var headers: [String: String]? {
         return ["Content-type": "application/json"]
+    }
+
+    var sampleData: Data {
+        return Data()
     }
 
 }

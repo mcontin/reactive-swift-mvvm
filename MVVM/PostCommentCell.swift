@@ -14,7 +14,7 @@ class PostCommentCell: UITableViewCell {
     @IBOutlet weak var commentLabel: UILabel!
     
     func setup(with comment: Comment) {
-        usernameLabel.text = comment.name
+        usernameLabel.text = comment.email
         commentLabel.text = comment.body
     }
     

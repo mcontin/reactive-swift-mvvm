@@ -8,6 +8,7 @@
 
 import XCTest
 import RxSwift
+import Moya
 @testable import MVVM
 
 class MVVMTests: XCTestCase {
@@ -34,7 +35,7 @@ class MVVMTests: XCTestCase {
                 print(error)
             })
             .disposed(by: disposeBag)
-        
+		
         wait(for: [expectation], timeout: 5)
     }
     
