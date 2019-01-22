@@ -10,7 +10,7 @@ import Moya
 
 struct API {
     
-    static let provider = MoyaProvider<ForumService>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    static let provider = MoyaProvider<ForumService>()
     
     private static let endpoint = ""
     

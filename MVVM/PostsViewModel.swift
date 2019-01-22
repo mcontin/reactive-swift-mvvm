@@ -72,6 +72,18 @@ class PostsViewModel {
         }
     }
 	
+	func deletePost(with id: Int) -> Completable {
+		return .create { [weak self] observer in
+			API.deletePost(with: id)
+				.subscribe(onCompleted: {
+					observer(.completed)
+				}, onError: { error in
+					print(error)
+					observer(.error(error))
+				})
+		}
+	}
+	
     func postId(for indexPath: IndexPath) -> Int? {
         let index = indexPath.row
         

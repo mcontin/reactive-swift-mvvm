@@ -39,7 +39,14 @@ extension API {
 //				}
 //			}
     }
-    
+	
+	static func deletePost(with id: Int) -> Completable {
+		return provider.rx
+			.request(.deletePost(id: id))
+			.filterSuccessfulStatusAndRedirectCodes()
+			.asObservable().ignoreElements()
+	}
+	
     static func getUsers() -> Single<[UserJSON]> {
         return provider.rx
             .request(.getUsers)

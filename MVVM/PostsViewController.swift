@@ -20,8 +20,8 @@ class PostsViewController: RxViewController {
         super.viewDidLoad()
         
         tableView.register(R.nib.postCell(), forCellReuseIdentifier: R.reuseIdentifier.postCell.identifier)
-        
-        tableView.rowHeight = UITableViewAutomaticDimension
+        UINib.init(resource: R.nib.postCell)
+		tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100 // arbitrary value, it's actually calculated based on constraints
         
         postsViewModel.observablePosts
@@ -31,13 +31,17 @@ class PostsViewController: RxViewController {
                 cell.model = post
             }
             .disposed(by: disposeBag)
-        
+		
         tableView.rx.itemSelected
             .bind { [weak self] indexPath in
                 self?.performSegue(withIdentifier: R.segue.postsViewController.kSeguePostDetails,
                                   sender: self?.postsViewModel.postId(for: indexPath))
             }
             .disposed(by: disposeBag)
+		
+		let loader = UIActivityIndicatorView()
+		let isLoading = BehaviorRelay<Bool>(value: true)
+		isLoading.bind(to: loader.rx.isAnimating).disposed(by: DisposeBag())
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

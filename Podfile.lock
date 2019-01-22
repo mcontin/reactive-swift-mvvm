@@ -13,9 +13,9 @@ PODS:
     - MoyaSugar/Core (= 1.2.0)
   - MoyaSugar/Core (1.2.0):
     - Moya (>= 10.0.0)
-  - R.swift (4.0.0):
-    - R.swift.Library (~> 4.0.0)
-  - R.swift.Library (4.0.0)
+  - R.swift (5.0.0):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
   - Realm (3.11.1):
     - Realm/Headers (= 3.11.1)
   - Realm/Headers (3.11.1)
@@ -35,7 +35,7 @@ PODS:
 DEPENDENCIES:
   - Moya/RxSwift (~> 11.0)
   - MoyaSugar (from `https://github.com/mcontin/MoyaSugar.git`, tag `1.2.0`)
-  - R.swift (= 4.0.0)
+  - R.swift (= 5.0)
   - RealmSwift (~> 3.0)
   - RxCocoa (~> 4.1)
   - RxDataSources (~> 3.0)
@@ -70,8 +70,8 @@ SPEC CHECKSUMS:
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   MoyaSugar: fbdbe75d039d2b9ee6e410d547ae3db636693f71
-  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
-  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  R.swift: f88c7d7d48a2be4dffa132dde1b3d389620310eb
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
@@ -80,6 +80,6 @@ SPEC CHECKSUMS:
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
 
-PODFILE CHECKSUM: 1475fe6660420d0e174e56d7807c26fecd55b802
+PODFILE CHECKSUM: 892f953ba8bc437f1ffb14b05a55114fbda54088
 
 COCOAPODS: 1.5.3
