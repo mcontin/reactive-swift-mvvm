@@ -9,8 +9,8 @@ target 'MVVM' do
     use_frameworks!
 
     # Alamofire wrapper +  RxSwift bindings
-    pod 'Moya/RxSwift', '~> 11.0'
-	pod 'MoyaSugar', :git => 'https://github.com/mcontin/MoyaSugar.git', :tag => '1.2.0'
+    pod 'Moya/RxSwift', '~> 12.0'
+#	pod 'MoyaSugar', :git => 'https://github.com/mcontin/MoyaSugar.git', :tag => '1.2.0'
 
     # RxSwift
     pod 'RxCocoa',       '~> 4.1'
@@ -20,7 +20,7 @@ target 'MVVM' do
     pod 'RealmSwift', '~> 3.0'
 
     # R.swift
-    pod 'R.swift', '4.0.0'
+    pod 'R.swift', '5.0'
 
     target 'MVVMTests' do
     inherit! :search_paths

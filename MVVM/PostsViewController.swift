@@ -19,9 +19,9 @@ class PostsViewController: RxViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(R.nib.postCell(), forCellReuseIdentifier: R.reuseIdentifier.postCell.identifier)
+        tableView.register(UINib(resource: R.nib.postCell), forCellReuseIdentifier: R.reuseIdentifier.postCell.identifier)
         
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100 // arbitrary value, it's actually calculated based on constraints
         
         postsViewModel.observablePosts

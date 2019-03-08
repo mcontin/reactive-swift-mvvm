@@ -26,7 +26,7 @@ class PostDetailViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 300 // arbitrary value, it's actually calculated based on constraints
         tableView.register(R.nib.postDetailCell)
         tableView.register(R.nib.postCommentCell)
