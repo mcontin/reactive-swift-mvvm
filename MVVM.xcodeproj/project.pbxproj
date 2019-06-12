@@ -44,6 +44,7 @@
 		49D0DC972032C1E40019275B /* ForumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D0DC962032C1E40019275B /* ForumAPI.swift */; };
 		6475A5E80F426F09441C7EE5 /* Pods_MVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3867A877A2A3BEF6E0E6F12D /* Pods_MVVMTests.framework */; };
 		BF8D9B1913E3A45045568610 /* ForumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D9BA40FB25192E781A120 /* ForumService.swift */; };
+		F8391FFB22B13BA2005B7F60 /* PostDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8391FFA22B13BA1005B7F60 /* PostDetailConfigurator.swift */; };
 		F8E178B720BC1A7600661A45 /* UserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178B620BC1A7600661A45 /* UserJSON.swift */; };
 		F8E178B920BC1CA500661A45 /* PostJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178B820BC1CA500661A45 /* PostJSON.swift */; };
 		F8E178BB20BC1DCE00661A45 /* CommentJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178BA20BC1DCE00661A45 /* CommentJSON.swift */; };
@@ -118,6 +119,7 @@
 		BF8D9BA40FB25192E781A120 /* ForumService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForumService.swift; sourceTree = "<group>"; };
 		C229FFCA43211DAC957867DD /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		D68E406E9AD4CDECCE1F3F31 /* Pods-MVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMTests/Pods-MVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F8391FFA22B13BA1005B7F60 /* PostDetailConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailConfigurator.swift; sourceTree = "<group>"; };
 		F8E178B620BC1A7600661A45 /* UserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJSON.swift; sourceTree = "<group>"; };
 		F8E178B820BC1CA500661A45 /* PostJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJSON.swift; sourceTree = "<group>"; };
 		F8E178BA20BC1DCE00661A45 /* CommentJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentJSON.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				49687AB11F781027008285F9 /* PostDetail.storyboard */,
 				4962E1501F535FD50006F165 /* PostDetailViewController.swift */,
 				49687AB81F7816EE008285F9 /* PostDetailViewModel.swift */,
+				F8391FFA22B13BA1005B7F60 /* PostDetailConfigurator.swift */,
 				49687ABC1F782DD0008285F9 /* Table cells */,
 			);
 			name = "Post details";
@@ -479,6 +482,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -602,36 +606,30 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MVVM/Pods-MVVM-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM/Pods-MVVM-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVVM/Pods-MVVM-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVM/Pods-MVVM-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -665,6 +663,7 @@
 				49D0DC952032C12C0019275B /* API.swift in Sources */,
 				F8E178B720BC1A7600661A45 /* UserJSON.swift in Sources */,
 				4952BDCF202E1FAB00D722D8 /* RxViewController.swift in Sources */,
+				F8391FFB22B13BA2005B7F60 /* PostDetailConfigurator.swift in Sources */,
 				49D0DC922032BF760019275B /* LocalStore.swift in Sources */,
 				491B10151F7570F900E6683D /* Segues.swift in Sources */,
 				49B883882046FC4400AFEF7B /* RealmResults.swift in Sources */,

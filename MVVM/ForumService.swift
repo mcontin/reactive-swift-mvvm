@@ -16,6 +16,10 @@ enum ForumService {
 }
 
 extension ForumService: TargetType {
+	
+	private var testEnabled: Bool {
+		return false
+	}
 
     var baseURL: URL {
         return URL(string: "https://jsonplaceholder.typicode.com")!

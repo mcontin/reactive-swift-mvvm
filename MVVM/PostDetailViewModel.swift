@@ -12,10 +12,8 @@ import RxCocoa
 class PostDetailViewModel {
     
     var postId: Int?
-    let comments = BehaviorRelay<[Comment]>(value: [])
-    
-    private let disposeBag = DisposeBag()
-    
+	var comments: [Comment] = []
+	
     func fetchComments() -> Completable {
         guard let postId = postId else {
             return .error(NSError.with(message: "PostId nil"))
@@ -25,7 +23,7 @@ class PostDetailViewModel {
             return API.getComments(for: postId)
                 .subscribe(onSuccess: { comments in
                     guard let this = self else { return }
-                    this.comments.accept(comments.map { Comment(with: $0) })
+                    this.comments = comments.map { Comment(with: $0) }
                     observer(.completed)
                 }, onError: { error in
                     observer(.error(error))

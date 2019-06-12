@@ -1,67 +1,53 @@
 PODS:
-  - Alamofire (4.8.0)
-  - Differentiator (3.1.0)
-  - Moya/Core (12.0.1):
+  - Alamofire (4.8.2)
+  - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
-    - Result (~> 4.0)
-  - Moya/RxSwift (12.0.1):
+    - Result (~> 4.1)
+  - Moya/RxSwift (13.0.1):
     - Moya/Core
     - RxSwift (~> 4.0)
-  - R.swift (5.0.0):
+  - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
-  - R.swift.Library (5.0.0)
-  - Realm (3.11.1):
-    - Realm/Headers (= 3.11.1)
-  - Realm/Headers (3.11.1)
-  - RealmSwift (3.11.1):
-    - Realm (= 3.11.1)
-  - Result (4.0.0)
-  - RxAtomic (4.4.0)
-  - RxCocoa (4.4.0):
-    - RxSwift (~> 4.0)
-  - RxDataSources (3.1.0):
-    - Differentiator (~> 3.0)
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
-  - RxSwift (4.4.0):
-    - RxAtomic (~> 4.4)
+  - R.swift.Library (5.0.1)
+  - Realm (3.16.1):
+    - Realm/Headers (= 3.16.1)
+  - Realm/Headers (3.16.1)
+  - RealmSwift (3.16.1):
+    - Realm (= 3.16.1)
+  - Result (4.1.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
 
 DEPENDENCIES:
-  - Moya/RxSwift (~> 12.0)
-  - R.swift (= 5.0)
-  - RealmSwift (~> 3.0)
-  - RxCocoa (~> 4.1)
-  - RxDataSources (~> 3.0)
+  - Moya/RxSwift (= 13.0.1)
+  - R.swift (= 5.0.3)
+  - RealmSwift (= 3.16.1)
+  - RxCocoa (= 4.5.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - Differentiator
     - Moya
     - R.swift
     - R.swift.Library
     - Realm
     - RealmSwift
     - Result
-    - RxAtomic
     - RxCocoa
-    - RxDataSources
     - RxSwift
 
 SPEC CHECKSUMS:
-  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
-  R.swift: f88c7d7d48a2be4dffa132dde1b3d389620310eb
-  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
-  Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
-  RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
-  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
-  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
-  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
-  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  Realm: 601cacc51d8be3b17a377ef787be0f6ee0e76cf1
+  RealmSwift: 486f2e09d5a8ccff63ed66e48d0846b111deb5e5
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
 
-PODFILE CHECKSUM: e77401baf31172f6c3f390d6901c78a21b5ed2c6
+PODFILE CHECKSUM: 24a1f51c5940b62b89ba7b199b597adecaeae7ab
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
