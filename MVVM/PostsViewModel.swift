@@ -12,22 +12,12 @@ import RxCocoa
 class PostsViewModel {
 
     private let posts = BehaviorRelay<[Post]>(value: [])
-    
-    private let disposeBag = DisposeBag()
-    
+	
     var observablePosts: Observable<[Post]> {
         return posts.asObservable()
     }
-    
-    init() {
-        fetchUsers()
-            .andThen(fetchLocalPosts())
-            .andThen(fetchRemotePosts())
-            .subscribe()
-            .disposed(by: disposeBag)
-    }
-    
-    func fetchUsers() -> Completable {
+	
+    private func fetchUsers() -> Completable {
         return .create { observer in
             API.getUsers()
                 .subscribe(onSuccess: { jsonUsers in
@@ -71,6 +61,12 @@ class PostsViewModel {
                 })
         }
     }
+	
+	func sync() -> Completable {
+		return fetchUsers()
+			.andThen(fetchLocalPosts())
+			.andThen(fetchRemotePosts())
+	}
     
     func postId(for indexPath: IndexPath) -> Int? {
         let index = indexPath.row

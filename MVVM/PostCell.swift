@@ -14,12 +14,10 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var previewLabel: UILabel!
     
-    var model: Post? {
-        didSet {
-            authorLabel.text = model?.author?.username
-            titleLabel.text = model?.title
-            previewLabel.text = model?.body
-        }
-    }
+	func setup(with post: Post) {
+		authorLabel.text = post.author?.username
+		titleLabel.text = post.title
+		previewLabel.text = post.body
+	}
     
 }

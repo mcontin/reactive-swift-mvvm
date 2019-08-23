@@ -16,7 +16,7 @@ class LocalStore {
         let realm = Realm.unsafeGet()
         do {
             try realm.write {
-                realm.add(object, update: true)
+                realm.add(object, update: .modified)
             }
         } catch let error {
             print("Error in LocalStore.save(object:):", error)
@@ -27,7 +27,7 @@ class LocalStore {
         let realm = Realm.unsafeGet()
         do {
             try realm.write {
-                realm.add(objects, update: true)
+                realm.add(objects, update: .modified)
             }
         } catch let error {
             print("Error in LocalStore.save(objects:):", error)
