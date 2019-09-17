@@ -9,23 +9,23 @@
 import RxSwift
 import Moya
 
-extension API {
+extension ForumAPI {
     
-    static func getPosts() -> Single<[PostJSON]> {
+    func getPosts() -> Single<[PostJSON]> {
         return provider.rx
             .request(.getPosts)
             .filterSuccessfulStatusAndRedirectCodes()
             .map([PostJSON].self)
     }
     
-    static func getUsers() -> Single<[UserJSON]> {
+    func getUsers() -> Single<[UserJSON]> {
         return provider.rx
             .request(.getUsers)
             .filterSuccessfulStatusAndRedirectCodes()
             .map([UserJSON].self)
     }
     
-    static func getComments(for postId: Int) -> Single<[CommentJSON]> {
+    func getComments(for postId: Int) -> Single<[CommentJSON]> {
         return provider.rx
             .request(.getPostComments(postId: postId))
             .filterSuccessfulStatusAndRedirectCodes()

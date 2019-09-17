@@ -19,7 +19,7 @@ class PostsViewModel {
 	
     private func fetchUsers() -> Completable {
         return .create { observer in
-            API.getUsers()
+            API.forum.getUsers()
                 .subscribe(onSuccess: { jsonUsers in
                     LocalStore.save(objects: jsonUsers.map { User(from: $0) })
                     observer(.completed)
@@ -45,7 +45,7 @@ class PostsViewModel {
     
     private func fetchRemotePosts() -> Completable {
         return .create { [weak self] observer in
-            API.getPosts()
+            API.forum.getPosts()
                 .subscribe(onSuccess: { jsonPosts in
                     guard let this = self else {
                         observer(.error(NSError.with(message: "Self got deallocated during the network call :c")))

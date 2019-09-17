@@ -51,6 +51,8 @@
 		F8E178BB20BC1DCE00661A45 /* CommentJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178BA20BC1DCE00661A45 /* CommentJSON.swift */; };
 		F8E178DB20BC4A3D00661A45 /* PostCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8E178DA20BC4A3D00661A45 /* PostCommentCell.xib */; };
 		F8E178DD20BC4F5000661A45 /* PostDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8E178DC20BC4F5000661A45 /* PostDetailCell.xib */; };
+		F8E6E3E4233131E100033642 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E6E3E3233131E100033642 /* APIConfiguration.swift */; };
+		F8E6E3E62331321600033642 /* APIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E6E3E52331321600033642 /* APIWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,8 @@
 		F8E178BA20BC1DCE00661A45 /* CommentJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentJSON.swift; sourceTree = "<group>"; };
 		F8E178DA20BC4A3D00661A45 /* PostCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCommentCell.xib; sourceTree = "<group>"; };
 		F8E178DC20BC4F5000661A45 /* PostDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailCell.xib; sourceTree = "<group>"; };
+		F8E6E3E3233131E100033642 /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		F8E6E3E52331321600033642 /* APIWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +345,8 @@
 		49D0DC932032C1210019275B /* API */ = {
 			isa = PBXGroup;
 			children = (
+				F8E6E3E52331321600033642 /* APIWrapper.swift */,
+				F8E6E3E3233131E100033642 /* APIConfiguration.swift */,
 				49D0DC942032C12C0019275B /* API.swift */,
 				49D0DC962032C1E40019275B /* ForumAPI.swift */,
 			);
@@ -649,6 +655,7 @@
 				49687ABB1F781AC0008285F9 /* Optional.swift in Sources */,
 				49D0DC972032C1E40019275B /* ForumAPI.swift in Sources */,
 				49B883822046CDAE00AFEF7B /* UILabel.swift in Sources */,
+				F8E6E3E4233131E100033642 /* APIConfiguration.swift in Sources */,
 				49B883842046FA1500AFEF7B /* UsersStore.swift in Sources */,
 				49B883862046FB5F00AFEF7B /* Error.swift in Sources */,
 				493CF8B01F828F8800A27E86 /* PostDetailSections.swift in Sources */,
@@ -667,6 +674,7 @@
 				F8E178B720BC1A7600661A45 /* UserJSON.swift in Sources */,
 				4952BDCF202E1FAB00D722D8 /* RxViewController.swift in Sources */,
 				F8391FFB22B13BA2005B7F60 /* PostDetailConfigurator.swift in Sources */,
+				F8E6E3E62331321600033642 /* APIWrapper.swift in Sources */,
 				49D0DC922032BF760019275B /* LocalStore.swift in Sources */,
 				491B10151F7570F900E6683D /* Segues.swift in Sources */,
 				49B883882046FC4400AFEF7B /* RealmResults.swift in Sources */,

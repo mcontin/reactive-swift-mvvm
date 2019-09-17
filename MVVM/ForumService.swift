@@ -22,7 +22,7 @@ extension ForumService: TargetType {
 	}
 
     var baseURL: URL {
-        return URL(string: "https://jsonplaceholder.typicode.com")!
+		return URL(string: API.forum.endpoint)!
     }
 
     var path: String {

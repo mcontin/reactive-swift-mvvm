@@ -20,7 +20,7 @@ class PostDetailViewModel {
         }
         
         return .create { [weak self] observer in
-            return API.getComments(for: postId)
+            return API.forum.getComments(for: postId)
                 .subscribe(onSuccess: { comments in
                     guard let this = self else { return }
                     this.comments = comments.map { Comment(with: $0) }

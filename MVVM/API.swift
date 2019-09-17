@@ -8,18 +8,22 @@
 
 import Moya
 
-struct API {
-    
-    static let provider = MoyaProvider<ForumService>(plugins: [NetworkLoggerPlugin(verbose: true)])
-    
-    private static let endpoint = ""
-    
-    static var v1: String {
-        return endpoint + "/api/v1"
-    }
-    
-    static var latest: String {
-        return v1
-    }
-    
+class API {
+	static let forum = ForumAPI()
+}
+
+class ForumAPI: APIWrapper {
+	
+	typealias T = ForumService
+	
+	let provider = MoyaProvider<ForumService>(plugins: [NetworkLoggerPlugin()])
+	
+	let endpoint: String
+	let apiVersion: String
+	
+	init(configuration: APIConfiguration = .default) {
+		self.endpoint = configuration.endpoint
+		self.apiVersion = configuration.apiVersion
+	}
+	
 }
